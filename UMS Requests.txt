@@ -1,0 +1,103 @@
+GET /coursesOffered?semesterId=sem304 HTTP/1.1
+Host: localhost:8090
+Connection: close
+User-Agent: Paw/3.2.2 (Macintosh; OS X/11.3.1) GCDHTTPRequest
+
+
+
+POST /courseTeacherAssignment HTTP/1.1
+Content-Type: application/json; charset=utf-8
+Host: localhost:8090
+Connection: close
+User-Agent: Paw/3.2.2 (Macintosh; OS X/11.3.1) GCDHTTPRequest
+Content-Length: 156
+
+{"course_id":"cor-550","name":"Digital Logic","description":"Description fo the course goes here!","creditHours":3,"semester":"sem304","teacherId":"tec354"}
+
+POST /courseRegistration HTTP/1.1
+Content-Type: application/json; charset=utf-8
+Host: localhost:8090
+Connection: close
+User-Agent: Paw/3.2.2 (Macintosh; OS X/11.3.1) GCDHTTPRequest
+Content-Length: 59
+
+{"id":"crs-9009","courseId":"cor-550","studentId":"std354"}
+
+POST /addNewSemester HTTP/1.1
+Content-Type: application/json; charset=utf-8
+Host: localhost:8090
+Connection: close
+User-Agent: Paw/3.2.2 (Macintosh; OS X/11.3.1) GCDHTTPRequest
+Content-Length: 50
+
+{"semesterId":"sem304","type":"fall","duration":5}
+
+POST /addNewAdmin HTTP/1.1
+Content-Type: text/plain; charset=utf-8
+Host: localhost:8090
+Connection: close
+User-Agent: Paw/3.2.2 (Macintosh; OS X/11.3.1) GCDHTTPRequest
+Content-Length: 265
+
+{
+  "admin": {
+    "teacherId": "adm354",
+    "firstName": "zafar",
+    "lastName": "haqeer",
+    "gender": "male",
+    "age": 34,
+    "phoneNumber": "0333333389",
+    "email": "zafar.h@gmail.com"
+  },
+  "user": {
+    "userId": "adm354",
+    "password": "abc"
+  }
+}
+
+POST /addNewTeacher HTTP/1.1
+Content-Type: text/plain; charset=utf-8
+Host: localhost:8090
+Connection: close
+User-Agent: Paw/3.2.2 (Macintosh; OS X/11.3.1) GCDHTTPRequest
+Content-Length: 266
+
+{
+  "teacher": {
+    "teacherId": "tec354",
+    "firstName": "Ali",
+    "lastName": "Murad",
+    "gender": "male",
+    "age": 42,
+    "phoneNumber": "03333333367",
+    "email": "muradali@gmail.com"
+  },
+  "user": {
+    "userId": "tec354",
+    "password": "abc"
+  }
+}
+
+POST /addNewStudent HTTP/1.1
+Content-Type: text/plain; charset=utf-8
+Host: localhost:8090
+Connection: close
+User-Agent: Paw/3.2.2 (Macintosh; OS X/11.3.1) GCDHTTPRequest
+Content-Length: 269
+
+{
+  "student": {
+    "studentId": "std354",
+    "firstName": "Rao",
+    "lastName": "Waqar",
+    "gender": "male",
+    "age": 24,
+    "phoneNumber": "03333834354",
+    "email": "iamwaqarrao@gmail.com"
+  },
+  "user": {
+    "userId": "std354",
+    "password": "abc"
+  }
+}
+
